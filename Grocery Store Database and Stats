@@ -1,0 +1,36 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section text, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES
+
+(1, "blueberries", "produce", 6, 3),
+(2, "orange", "produce", 6, 6),
+(3, "bananas", "produce", 6, 4),
+(4, "potatoes", "produce", 6, 4),
+(5, "bread", "bakery", 3, 2),
+(6, "potato chips", "snacks", 1, 2),
+(7, "salsa", "snacks", 1, 4),
+(8, "milk", "dairy", 8, 3),
+(9, "eggs", "dairy", 8, 7),
+(10, "lettuce", "produce", 6, 3),
+(11, "cheese", "dairy", 8, 4),
+(12, "cookies", "snacks", 1, 6),
+(13, "soda", "drinks", 9, 5),
+(14, "nuts", "snacks", 1, 8),
+(15, "yogurt", "dairy", 8, 5)
+;
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items in the produce section? 
+SELECT AVG(price) "avg produce item price"
+FROM store
+where section='produce'; 
+
+--what are the first 5 items in alphabetical order?
+SELECT item FROM store
+ORDER BY item asc
+limit 5;
