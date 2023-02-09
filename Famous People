@@ -1,0 +1,14 @@
+--Create a database about famous people
+
+--Movie stars: Display only actors/actresses. What movies are they in? Are they married to each other?
+
+SELECT name, example FROM people
+JOIN personalinfo
+ON people.id = personalinfo.id
+AND people.occupation = "Actor";
+
+SELECT name, spouse FROM people
+JOIN personalinfo
+ON people.id = personalinfo.id
+AND people.occupation = "Actor";
+
