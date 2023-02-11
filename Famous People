@@ -12,3 +12,9 @@ JOIN personalinfo
 ON people.id = personalinfo.id
 AND people.occupation = "Actor";
 
+
+--Display only authors and their work.
+SELECT name, example FROM people
+JOIN personalinfo
+ON people.id = personalinfo.id
+AND people.occupation = "Author";
